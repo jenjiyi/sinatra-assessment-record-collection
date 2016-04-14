@@ -1,0 +1,11 @@
+<h1><%= @user.username %>'s music catalog</h1>
+<% @user.records.each do |record| %>
+  <p>
+    <%= record.album_name %> - <%= record.artist_name %>
+      <% if record.user_id==current_user.id %> - <a href="/records/<%=record.id%>">
+    view/edit</a>
+      <%end%>
+  </p>
+<% end %>
+<hr>
+<a href="/records">See all records listed</a>

@@ -1,0 +1,21 @@
+<h2>Record</h2>
+
+<p><% unless locals.empty? %>
+  <%= message %>
+<% end %></p>
+
+<h4><i><%= @record.album_name %></i></h4>
+<h5><%= @record.artist_name %></h5>
+
+<p>Your rating: <%= @record.rating %></p>
+<p>Year released: <%= @record.release_year %></p>
+<p>Comments: <%= @record.comments %></p>
+
+<a href="/records/<%=@record.id%>/edit" class="btn btn-default">Edit Record</a>
+<form method="POST" action="/records/<%=@record.id%>/delete">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <br><input type="submit" value="Delete Record" class="btn btn-default">
+</form>
+<hr>
+<p><a href="/records">See all records listed</a></p>
+<p><a href="/records/users/<%=@record.user_id%>">See all of your records listed</a></p>

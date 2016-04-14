@@ -1,0 +1,18 @@
+<h1>Records</h1>
+<h3>
+<% unless locals.empty? %>
+  <%= message %>
+<% end %>
+</h3>
+<p>Welcome, <%= current_user.username %> (<a href="/logout">Logout</a>)</p>
+<h4><a href="/records/new">Catalog a record &gt;</a></h4>
+<hr>
+
+<h5>A list of all records in catalog:</h5>
+<% @records.each do |record| %> 
+    <p><%= record.artist_name %> | <%= record.album_name %> <% if record.user_id==current_user.id %> | <a href="/records/<%=record.id%>">View your record</a>
+    <%end%></p>
+<%end%>
+
+
+
