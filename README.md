@@ -14,8 +14,8 @@ Any validation failures must be shown to user with an error message
 
 For this assessment you'll be creating any sort of CRUD app. The app should be a custom app that is created to track something important to you. Whether that's your golf club collection, or your blog posts is up to you. These types of apps are generally referred to as CRUD or Content Management Systems.
 
-## Overview
+## Student notes
 A simple RESTful app to catalog a collection, in this case, records. It allows users to store, rate and list albums that they own. They are also able to see what other users are adding.
 
 
-<p data-visibility='hidden'>View <a href='https://learn.co/tracks/full-stack-web-development/sinatra/sinatra-project-mode/sinatra-assessment'>Sinatra Assessment</a> on Learn.co and start learning to code for free.</p>
+<p data-visibility='hidden'>View <a href='https://learn.co/tracks/full-stack-web-development/sinatra/sinatra-project-mode/sinatra-assessment'>Sinatra Assessment</a> on Learn.co.</p>
