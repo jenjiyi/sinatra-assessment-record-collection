@@ -22,9 +22,14 @@ class UsersController < ApplicationController
   post '/signup' do
     @user = User.new(params)
     if @user.username != "" && @user.email != "" && @user.password != "" && @user.password != nil
-      @user.save
-      session[:user_id] = @user.id
-      redirect "/records"
+      @user.username = @user.username.downcase
+      if User.find_by(:username => params[:username])
+        erb  :'/users/create_user', locals: {message: "An error occured while signing up. A user with this username already exists in the database."}
+      else
+        @user.save
+        session[:user_id] = @user.id
+        redirect "/records"
+      end
     else
       redirect "/signup"
     end
